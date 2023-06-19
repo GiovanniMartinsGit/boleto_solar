@@ -1,0 +1,27 @@
+<%= form_with(model: taxa, local: true) do |form| %>
+  <% if taxa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(taxa.errors.count, "error") %> prohibited this taxa from being saved:</h2>
+
+      <ul>
+      <% taxa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :valor_kwh %>
+    <%= form.text_field :valor_kwh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_bandeira %>
+    <%= form.text_field :valor_bandeira %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

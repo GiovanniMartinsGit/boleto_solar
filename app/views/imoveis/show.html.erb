@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @imovel.endereco %>
+</p>
+
+<p>
+  <strong>Morador:</strong>
+  <%= @imovel.morador.nome %>
+</p>
+
+<%= link_to 'Edit', edit_imovel_path(@imovel) %> |
+<%= link_to 'Back', imoveis_path %>

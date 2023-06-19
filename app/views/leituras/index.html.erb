@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Leituras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Data</th>
+      <th>Imovel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leituras.each do |leitura| %>
+      <tr>
+        <td><%= leitura.valor %></td>
+        <td><%= leitura.data %></td>
+        <td><%= leitura.imovel.endereco %></td>
+        <td><%= link_to 'Show', leitura %></td>
+        <td><%= link_to 'Edit', edit_leitura_path(leitura) %></td>
+        <td><%= link_to 'Gerar PDF', gerar_pdf_leitura_path(leitura, format: :pdf, target: :_blank) %></td>
+        <td><%= link_to 'Destroy', leitura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Leitura', new_leitura_path %>

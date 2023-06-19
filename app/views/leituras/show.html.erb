@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @leitura.valor %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @leitura.data %>
+</p>
+
+<p>
+  <strong>Imovel:</strong>
+  <%= @leitura.imovel.endereco %>
+</p>
+
+<%= link_to 'Edit', edit_leitura_path(@leitura) %> |
+<%= link_to 'Back', leituras_path %>

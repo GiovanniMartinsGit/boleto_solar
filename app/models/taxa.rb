@@ -1,0 +1,3 @@
+class Taxa < ApplicationRecord
+  
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Taxas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor kwh</th>
+      <th>Valor bandeira</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @taxas.each do |taxa| %>
+      <tr>
+        <td><%= taxa.valor_kwh %></td>
+        <td><%= taxa.valor_bandeira %></td>
+        <td><%= link_to 'Show', taxa %></td>
+        <td><%= link_to 'Edit', edit_taxa_path(taxa) %></td>
+        <td><%= link_to 'Destroy', taxa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taxa', new_taxa_path %>

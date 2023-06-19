@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valor kwh:</strong>
+  <%= @taxa.valor_kwh %>
+</p>
+
+<p>
+  <strong>Valor bandeira:</strong>
+  <%= @taxa.valor_bandeira %>
+</p>
+
+<%= link_to 'Edit', edit_taxa_path(@taxa) %> |
+<%= link_to 'Back', taxas_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @morador.cpf %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @morador.nome %>
+</p>
+
+<%= link_to 'Edit', edit_morador_path(@morador) %> |
+<%= link_to 'Back', moradores_path %>

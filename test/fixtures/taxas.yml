@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valor_kwh: 1.5
+  valor_bandeira: 
+
+two:
+  valor_kwh: 1.5
+  valor_bandeira: 
